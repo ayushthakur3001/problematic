@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  background-color: rgb(250, 244, 244);
+}
+
+
+
+.header {
+  background-color: #121212;
+  border-radius: 0 0 10px 10px;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  color: #121212;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: -1px 1px 0 #41ba45,
+    1px 1px 0 #c63d2b,
+    1px -1px 0 #42afac,
+    -1px -1px 0 #c6c23f;
+}
+
+.header {
+  font-size: 80px;
+  font-family: 'Luckiest Guy';
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.timer {
+  width: 17vw;
+  height: calc(100vh - 20px);
+  margin-top: 10px;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  top: 100px;
+  padding: 30px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.timer h1 {
+  color: rgb(102, 94, 94);
+}
+
+.countdown {
+  font-size: 30px;
+}
+
+.timer-btn {
+  width: 40%;
+  margin-top: 20px;
+}
+
+
+
+.container {
+  width: 75vw;
+  height: calc(100vh);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.prob-container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
