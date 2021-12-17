@@ -4,43 +4,42 @@ import Tower from '../Tower';
 import Sudoku from '../Sudoku';
 import Queens from '../Queens';
 import Btn from '../Button';
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
+import { Button } from '@mui/material';
+import Timer from '../Timer';
+import PollContext from '../../store/prob-context';
 
 
 const Container = () => {
-    const [currentProblem, setCurrentProblem] = useState(1);
-    const handleClick = () => {
-        if (currentProblem <= 4) {
-            setCurrentProblem(currentProblem + 1);
-        }
-    }
+    const ctx = useContext(PollContext);
+
     return (
         <div className="container">
 
             {
-                currentProblem == 1 &&
+                ctx.currentProblem == 1 &&
                 <Puzzle />
             }
             {
-                currentProblem == 2 &&
+                ctx.currentProblem == 2 &&
                 <Tower />
             }
             {
-                currentProblem == 3 &&
+                ctx.currentProblem == 3 &&
                 <Sudoku />
             }
             {
-                currentProblem == 4 &&
+                ctx.currentProblem == 4 &&
                 <Queens />
             }
             {
-                currentProblem == 5 &&
+                ctx.currentProblem == 5 &&
                 <Jigsaw />
             }
-
-            <Btn handleClick={handleClick} />
-
-
+            {
+                ctx.currentProblem == 6 &&
+                <h1> Thank You </h1>
+            }
         </div>
     )
 }

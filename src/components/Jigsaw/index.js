@@ -1,6 +1,6 @@
 const Jigsaw = () => {
     return (
-        <iframe src="https://www.jigsawplanet.com/?rc=play&pid=0eec5303d043" ></iframe>
+        <iframe className="prob-container" src="https://www.onlinejigsawpuzzles.net/puzzle.php?image=images/puzzle/Fresh-healthy-grapes.jpg" ></iframe>
 
     )
 }

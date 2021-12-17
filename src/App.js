@@ -11,7 +11,6 @@ const App = () => {
       <h1 className="header" >Problematic</h1>
       <Container />
       <Timer />
-
     </div>
   )
 }
