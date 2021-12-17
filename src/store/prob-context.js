@@ -6,32 +6,51 @@ import { useHistory } from "react-router";
 const PollContext = React.createContext({
     currentProblem: null,
     handleClick: () => { },
-    handleStartClick: () => { }
+    handleStartClick: () => { },
+    dis: null,
+    setDisabled: () => { },
+    showTimer: null,
+    setTimer: () => { }
 });
 export const PollContextProvider = (props) => {
     useEffect(() => {
         localStorage.setItem('current', 0);
     }, []);
 
-    const [currentProblem, setCurrentProblem] = useState(localStorage.getItem('current'));
+    const [dis, setDis] = useState(false);
+    const [currentProblem, setCurrentProblem] = useState(0);
+    const [showTimer, setShowTimer] = useState(false);
+
 
     const handleClick = () => {
-        if (currentProblem <= 5) {
-            localStorage.setItem('current', +currentProblem + 1);
-            setCurrentProblem(localStorage.getItem('current'));
+        if (currentProblem <= 3) {
+            setCurrentProblem(currentProblem + 1);
         }
     }
 
     const handleStartClick = () => {
-        localStorage.setItem('current', +currentProblem + 1);
-        setCurrentProblem(localStorage.getItem('current'))
+        setCurrentProblem(1)
+    }
+
+    const setDisabled = () => {
+        setDis(true);
+    }
+    const setTimer = () => {
+        if (showTimer !== true) {
+            setShowTimer(true);
+        }
+
     }
 
 
     const contextValue = {
         currentProblem: currentProblem,
         handleClick: handleClick,
-        handleStartClick: handleStartClick
+        handleStartClick: handleStartClick,
+        dis: dis,
+        setDisabled: setDisabled,
+        showTimer: showTimer,
+        setTimer: setTimer
 
     };
 

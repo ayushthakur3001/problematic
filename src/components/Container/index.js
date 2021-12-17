@@ -12,7 +12,11 @@ import PollContext from '../../store/prob-context';
 
 const Container = () => {
     const ctx = useContext(PollContext);
-
+    const handleBtnClick = () => {
+        ctx.handleStartClick();
+        ctx.setDisabled();
+        ctx.setTimer();
+    }
     return (
         <div className="container">
 
@@ -28,16 +32,16 @@ const Container = () => {
                 ctx.currentProblem == 3 &&
                 <Sudoku />
             }
-            {
+            {/* {
                 ctx.currentProblem == 4 &&
                 <Queens />
             }
             {
                 ctx.currentProblem == 5 &&
                 <Jigsaw />
-            }
+            } */}
             {
-                ctx.currentProblem == 6 &&
+                ctx.currentProblem == 4 &&
                 <h1> Thank You </h1>
             }
         </div>
